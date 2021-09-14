@@ -26,12 +26,14 @@ void main() {
       // final height =
       final weight_minus = find.byKey(Key('plusminus'));
       final weight_plus = find.byKey(Key('plusminus'));
-      final calculate = find.byType(BottomButton);
+      final calculate = find.text('CALCULATE');
 
+      print("Click male");
       await tester.tap(male);
       await tester.pumpAndSettle();
       sleep(Duration(seconds:4));
 
+      print("Click female");
       await tester.tap(female);
       await tester.pumpAndSettle();
       await tester.tap(weight_minus);
@@ -41,7 +43,16 @@ void main() {
 
       // final age =
       // final calculate  =
-      
+
+      // final emailField = find.byType(TextField).first;
+      // final passwordField = find.byKey(Key('Password'));
+      // final signInButton = find.text('Sign in');
+      //
+      // await tester.enterText(passwordField, "Test@1234");
+      // await tester.tap(signInButton);
+      // print("Started verifying the message for successful login.");
+      // await tester.ensureVisible(signInMessage);
+      //
 
     });
   });
